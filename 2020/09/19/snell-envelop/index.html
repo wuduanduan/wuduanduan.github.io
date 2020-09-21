@@ -28,7 +28,7 @@
 <meta property="og:description" content="这类问题是最优停时问题。比如考虑这样一个问题：市场上存在$N$个面试者，他们投递简历并面试的顺序是随机的。在我们的面试标准下，每个求职者都会有一个分数，因此客观来说，每个求职者相对别人的排位是固定的。但是我们只有已经来面试的求职者的信息，因为我们会有面试过的人的相对排位。比如已经面试了三个人，他们的排位分别是2，1，3，接下来第四名求职者来到以后，我们发现第四位是最棒的，所以他们的排位变成了3">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-19T20:52:33.000Z">
-<meta property="article:modified_time" content="2020-09-19T21:50:13.192Z">
+<meta property="article:modified_time" content="2020-09-20T13:08:31.751Z">
 <meta property="article:author" content="Ruru">
 <meta property="article:tag" content="quant">
 <meta name="twitter:card" content="summary">
@@ -173,10 +173,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-09-19 22:52:33 / Modified: 23:50:13" itemprop="dateCreated datePublished" datetime="2020-09-19T22:52:33+02:00">2020-09-19</time>
+              <time title="Created: 2020-09-19 22:52:33" itemprop="dateCreated datePublished" datetime="2020-09-19T22:52:33+02:00">2020-09-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-20 15:08:31" itemprop="dateModified" datetime="2020-09-20T15:08:31+02:00">2020-09-20</time>
+              </span>
 
           
 
@@ -195,7 +201,7 @@
 <p>每个求职者面试完后，我们都可以决定要不要录用。如果不要就会拒绝这个面试者，然后继续组织面试。如果一旦决定录用一个面试者，就停止继续面试别的人。</p>
 <p>怎样能给出一个比较好的招聘策略，目标是：使得我们有很大概率，招聘到在我们的标准下，潜在的N位求职者中得分最高的一位？</p>
 <p>我们注意到，由于求职者的到达顺序是随机的，所以尽管我们知道已经来面对的人的相对排位，但是并不知道下一个面试者会插到到一个位置,i.e, 如果把第$n$个求职者面试完后我们给他的相对排位记为$X_n$,那么$X_n$其实是在1到$n$之间均匀分布的。而最好的求职者也是在所有的求职者之间均匀分布的，所以第$n$个求职者是不是最好的概率可以用函数$\phi$来表示:<br>$$<br>\psi_n(x) = \frac{n}{N} 1_{x=1}<br>$$</p>
-<p>如果我们面试完所有的人，那么我们的选择必然是准确的。但是由于N可能很大，所以我们希望给出的策略只要面试一部分人，就能够以较大的概率做出较好的选择。因此我们要优化的问题是:<br>$$<br>\text{max} \text{E}[\psi_\tau(X_\tau)], \quad {tau \leq N}<br>$$</p>
+<p>如果我们面试完所有的人，那么我们的选择必然是准确的。但是由于N可能很大，所以我们希望给出的策略只要面试一部分人，就能够以较大的概率做出较好的选择。因此我们要优化的问题是:<br>$$<br>\text{max} \text{E}[\psi_\tau(X_\tau)], \quad {\tau \leq N}<br>$$</p>
 
     </div>
 
@@ -217,7 +223,10 @@
     <a href="/2020/09/17/cpp/" rel="prev" title="Cpp从忘记到放弃">
       <i class="fa fa-chevron-left"></i> Cpp从忘记到放弃
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/21/accept-rejet/" rel="next" title="Acceptance-Rejection Sampling">
+      Acceptance-Rejection Sampling <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -289,7 +298,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
